@@ -42,4 +42,4 @@ jobs:
       - name: Deploy code to qaorg Sandbox
         run: |
           cd ./main
-          sfdx force:source:deploy --wait 180 -u qaorg --manifest --manifest metadatadeploy/package.xml--verbose
+          sfdx force:source:deploy --wait 180 -u qaorg --manifest metadatadeploy/package.xml--verbose
