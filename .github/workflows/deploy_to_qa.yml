@@ -28,38 +28,20 @@ jobs:
           cat ./env/.github/workflows/env | grep QA_CONSUMER_KEY= | grep -o '".*"' | sed 's/"//g' > ./main/QA_CONSUMER_KEY
           cat ./env/.github/workflows/env | grep QA_USERNAME= | grep -o '".*"' | sed 's/"//g' > ./main/QA_USERNAME
       
-<<<<<<< HEAD
-   - name: Convert metadata to mdapi format
-      run: |
-        cd main
-        sfdx force:source:convert --rootdir force-app --outputdir metadatadeploy
-    
-    - name: Authenticate Sandbox
-      run: |
-        echo "${SALESFORCE_JWT_SECRET_KEY}" > server.key
-        sfdx force:auth:jwt:grant --jwtkeyfile ./server.key --setalias qaorg --instanceurl https://test.salesforce.com --clientid $(cat ./main/QA_CONSUMER_KEY) --username $(cat ./main/QA_USERNAME)
-      env:
-        SALESFORCE_JWT_SECRET_KEY: ${{ secrets.SFDX_JWT_SECRET_NONPROD }}
-
-    
-    - name: Deploy on Target Sandbox
-      run: |
-        cd main
-        sfdx force:source:deploy --wait 180 --checkonly -u qaorg --manifest metadatadeploy/package.xml --verbose
-=======
       - name: Convert metadata to mdapi format
         run: |
           cd main
           sfdx force:source:convert --rootdir force-app --outputdir metadatadeploy
-      
+    
       - name: Authenticate Sandbox
         run: |
           echo "${SALESFORCE_JWT_SECRET_KEY}" > server.key
           sfdx force:auth:jwt:grant --jwtkeyfile ./server.key --setalias qaorg --instanceurl https://test.salesforce.com --clientid $(cat ./main/QA_CONSUMER_KEY) --username $(cat ./main/QA_USERNAME)
         env:
           SALESFORCE_JWT_SECRET_KEY: ${{ secrets.SFDX_JWT_SECRET_NONPROD }}
-      - name: Deploy code to qaorg Sandbox
+
+    
+      - name: Deploy on Target Sandbox
         run: |
-          cd ./main
-          sfdx force:source:deploy --wait 180 -u qaorg --manifest metadatadeploy/package.xml--verbose
->>>>>>> fae3f866e7abcd7d3a3cd69a83ddcc102f75a2c9
+          cd main
+          sfdx force:source:deploy --wait 180 --checkonly -u qaorg --manifest metadatadeploy/package.xml --verbose
