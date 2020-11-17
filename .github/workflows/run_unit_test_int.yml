@@ -2,7 +2,8 @@ name: Run unit tests on int Sandbox
 
 on:
   pull_request:
-    branches: [ integration ]   
+    branches: [ integration ]  
+    types: [opened, synchronize, reopened] 
     paths:
       - '.github/workflows/**'
       - 'force-app/**'
