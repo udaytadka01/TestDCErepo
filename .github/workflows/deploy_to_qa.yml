@@ -27,6 +27,12 @@ jobs:
         run: |
           cat ./env/.github/workflows/env | grep QA_CONSUMER_KEY= | grep -o '".*"' | sed 's/"//g' > ./main/QA_CONSUMER_KEY
           cat ./env/.github/workflows/env | grep QA_USERNAME= | grep -o '".*"' | sed 's/"//g' > ./main/QA_USERNAME
+      
+      - name: Convert metadata to mdapi format
+        run: |
+          cd main
+          sfdx force:source:convert --rootdir force-app --outputdir metadatadeploy
+      
       - name: Authenticate Sandbox
         run: |
           echo "${SALESFORCE_JWT_SECRET_KEY}" > server.key
@@ -36,4 +42,4 @@ jobs:
       - name: Deploy code to qaorg Sandbox
         run: |
           cd ./main
-          sfdx force:source:deploy --wait 180 -u qaorg --manifest manifest/package.xml --verbose
+          sfdx force:source:deploy --wait 180 -u qaorg --manifest --manifest metadatadeploy/package.xml--verbose
