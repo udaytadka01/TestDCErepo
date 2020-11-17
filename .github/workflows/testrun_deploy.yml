@@ -1,0 +1,17 @@
+name: Deploy to QA TEST pioeline
+
+on:
+  push:
+    branches:
+      - release-**
+    paths:
+      - '.github/workflows/**'
+      - 'force-app/**'
+
+jobs:
+  deploy-to-qa:      
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Salesforce CLIh
+        run: |
+          echo "test pipeline"
