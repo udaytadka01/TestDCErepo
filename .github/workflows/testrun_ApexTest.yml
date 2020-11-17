@@ -15,3 +15,4 @@ jobs:
     steps:
     - name: Install Salesforce CLI
       run: |
+        echo "this is pull request pipeline"
