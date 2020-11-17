@@ -1,4 +1,4 @@
-name: Deploy to int Sandbox
+name: Deploy to QA Sandbox
 
 on:
   push:
@@ -6,15 +6,44 @@ on:
     paths:
       - '.github/workflows/**'
       - 'force-app/**'
-
-jobs:     
-  deploy-to-int:      
+jobs:    
+  deploy-to-qa:      
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-        - name: Checkout source code
-          uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-        - name: Run a one-line script
-          run: echo Hello, world!
+      - name: Install Salesforce CLI
+        run: |
+          wget https://developer.salesforce.com/media/salesforce-cli/sfdx-cli/channels/stable/sfdx-cli-v7.72.0-697e9faee2-linux-x64.tar.xz
+          mkdir sfdx-cli
+          tar xJf sfdx-cli-v7.72.0-697e9faee2-linux-x64.tar.xz -C sfdx-cli --strip-components 1
+          ./sfdx-cli/install
+      - name: Checkout integration branch and grab environment keys
+        uses: actions/checkout@v2
+        with:
+          ref: 'integration'
+        path: env
+      - name: Checkout source code
+        uses: actions/checkout@v2
+        with:
+          path: main
+      - name: Set environment variable
+        run: |
+          cat ./env/.github/workflows/env | grep QA_CONSUMER_KEY= | grep -o '".*"' | sed 's/"//g' > ./main/QA_CONSUMER_KEY
+          cat ./env/.github/workflows/env | grep QA_USERNAME= | grep -o '".*"' | sed 's/"//g' > ./main/QA_USERNAME
+    
+      - name: Convert metadata to mdapi format
+        run: |
+          cd main
+          sfdx force:source:convert --rootdir force-app --outputdir metadatadeploy
+    
+      - name: Authenticate Sandbox
+        run: |
+          echo "${SALESFORCE_JWT_SECRET_KEY}" > server.key
+          sfdx force:auth:jwt:grant --jwtkeyfile ./server.key --setalias qaorg --instanceurl https://test.salesforce.com --clientid $(cat ./main/QA_CONSUMER_KEY) --username $(cat ./main/QA_USERNAME)
+        env:
+          SALESFORCE_JWT_SECRET_KEY: ${{ secrets.SFDX_JWT_SECRET_NONPROD }}
+          
+      - name: Deploy metadata to Target Sandbox
+        run: |
+          cd main
+          sfdx force:source:deploy --wait 180 -u qaorg --manifest metadatadeploy/package.xml --verbose
+  #       sfdx force:source:deploy --wait 180 --checkonly -u qaorg --manifest metadatadeploy/package.xml --verbose
