@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Top_Level_Account_Id__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Parent.Parent.Parent.Parent.ParentId)), Parent.Parent.Parent.Parent.ParentId,
+IF(NOT(ISBLANK(Parent.Parent.Parent.ParentId)), Parent.Parent.Parent.ParentId,
+IF(NOT(ISBLANK(Parent.Parent.ParentId)), Parent.Parent.ParentId,
+IF(NOT(ISBLANK(Parent.ParentId)), Parent.ParentId,
+IF(NOT(ISBLANK(ParentId)),ParentId,
+Id)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Top_Level_Account_Id</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

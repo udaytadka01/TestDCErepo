@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Medical Doctor</fullName>
+        <default>false</default>
+        <label>Medical Doctor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Staff</fullName>
+        <default>false</default>
+        <label>Staff</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Practice Manager</fullName>
+        <default>false</default>
+        <label>Practice Manager</label>
+    </standardValue>
+</StandardValueSet>

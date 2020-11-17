@@ -1,0 +1,164 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "AccountContactRelation",
+        "referenceId": "AccountContactRelationshipRef1"
+      },
+      "AccountId": "AccountRef1",
+      "ContactId": "ContactRef3",
+      "Roles": null,
+      "IsActive": true,
+      "StartDate": "2020-09-16",
+      "EndDate": null,
+      "HealthCloudGA__PrimaryGroup__c": false,
+      "HealthCloudGA__Primary__c": false,
+      "HealthCloudGA__Rollups__c": null,
+      "Success_Advocate__c": false
+    },
+    {
+      "attributes": {
+        "type": "AccountContactRelation",
+        "referenceId": "AccountContactRelationshipRef2"
+      },
+      "AccountId": "AccountRef1",
+      "ContactId": "ContactRef4",
+      "Roles": null,
+      "IsActive": true,
+      "StartDate": "2020-09-16",
+      "EndDate": null,
+      "HealthCloudGA__PrimaryGroup__c": false,
+      "HealthCloudGA__Primary__c": false,
+      "HealthCloudGA__Rollups__c": null,
+      "Success_Advocate__c": false
+    },
+    {
+      "attributes": {
+        "type": "AccountContactRelation",
+        "referenceId": "AccountContactRelationshipRef3"
+      },
+      "AccountId": "AccountRef6",
+      "ContactId": "ContactRef2",
+      "Roles": null,
+      "IsActive": true,
+      "StartDate": "2020-09-16",
+      "EndDate": null,
+      "HealthCloudGA__PrimaryGroup__c": false,
+      "HealthCloudGA__Primary__c": false,
+      "HealthCloudGA__Rollups__c": null,
+      "Success_Advocate__c": false
+    },
+    {
+      "attributes": {
+        "type": "AccountContactRelation",
+        "referenceId": "AccountContactRelationshipRef4"
+      },
+      "AccountId": "AccountRef7",
+      "ContactId": "ContactRef5",
+      "Roles": null,
+      "IsActive": true,
+      "StartDate": "2020-09-16",
+      "EndDate": null,
+      "HealthCloudGA__PrimaryGroup__c": false,
+      "HealthCloudGA__Primary__c": false,
+      "HealthCloudGA__Rollups__c": null,
+      "Success_Advocate__c": false
+    },
+    {
+      "attributes": {
+        "type": "AccountContactRelation",
+        "referenceId": "AccountContactRelationshipRef5"
+      },
+      "AccountId": "AccountRef2",
+      "ContactId": "ContactRef6",
+      "Roles": null,
+      "IsActive": true,
+      "StartDate": "2020-09-16",
+      "EndDate": null,
+      "HealthCloudGA__PrimaryGroup__c": false,
+      "HealthCloudGA__Primary__c": false,
+      "HealthCloudGA__Rollups__c": null,
+      "Success_Advocate__c": false
+    },
+    {
+      "attributes": {
+        "type": "AccountContactRelation",
+        "referenceId": "AccountContactRelationshipRef6"
+      },
+      "AccountId": "AccountRef2",
+      "ContactId": "ContactRef1",
+      "Roles": null,
+      "IsActive": true,
+      "StartDate": "2020-09-16",
+      "EndDate": null,
+      "HealthCloudGA__PrimaryGroup__c": false,
+      "HealthCloudGA__Primary__c": false,
+      "HealthCloudGA__Rollups__c": null,
+      "Success_Advocate__c": false
+    },
+    {
+      "attributes": {
+        "type": "AccountContactRelation",
+        "referenceId": "AccountContactRelationshipRef7"
+      },
+      "AccountId": "AccountRef3",
+      "ContactId": "ContactRef1",
+      "Roles": null,
+      "IsActive": true,
+      "StartDate": "2020-09-16",
+      "EndDate": null,
+      "HealthCloudGA__PrimaryGroup__c": false,
+      "HealthCloudGA__Primary__c": false,
+      "HealthCloudGA__Rollups__c": null,
+      "Success_Advocate__c": false
+    },
+    {
+      "attributes": {
+        "type": "AccountContactRelation",
+        "referenceId": "AccountContactRelationshipRef8"
+      },
+      "AccountId": "AccountRef3",
+      "ContactId": "ContactRef6",
+      "Roles": null,
+      "IsActive": true,
+      "StartDate": "2020-09-16",
+      "EndDate": null,
+      "HealthCloudGA__PrimaryGroup__c": false,
+      "HealthCloudGA__Primary__c": false,
+      "HealthCloudGA__Rollups__c": null,
+      "Success_Advocate__c": false
+    },
+    {
+      "attributes": {
+        "type": "AccountContactRelation",
+        "referenceId": "AccountContactRelationshipRef9"
+      },
+      "AccountId": "AccountRef3",
+      "ContactId": "ContactRef5",
+      "Roles": null,
+      "IsActive": true,
+      "StartDate": "2020-09-16",
+      "EndDate": null,
+      "HealthCloudGA__PrimaryGroup__c": false,
+      "HealthCloudGA__Primary__c": false,
+      "HealthCloudGA__Rollups__c": null,
+      "Success_Advocate__c": false
+    },
+    {
+      "attributes": {
+        "type": "AccountContactRelation",
+        "referenceId": "AccountContactRelationshipRef10"
+      },
+      "AccountId": "AccountRef3",
+      "ContactId": "ContactRef2",
+      "Roles": null,
+      "IsActive": true,
+      "StartDate": "2020-09-16",
+      "EndDate": null,
+      "HealthCloudGA__PrimaryGroup__c": false,
+      "HealthCloudGA__Primary__c": false,
+      "HealthCloudGA__Rollups__c": null,
+      "Success_Advocate__c": false
+    }
+  ]
+}

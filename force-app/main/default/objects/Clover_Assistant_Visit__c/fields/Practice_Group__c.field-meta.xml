@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Practice_Group__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Practice Group</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Value does not exist or does not match filter criteria, must lookup to a Practice Group.</errorMessage>
+        <filterItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Practice Group</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Clover Assistant Visits (Practice Group)</relationshipLabel>
+    <relationshipName>Clover_Assistant_Visits2</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

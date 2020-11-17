@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mode_of_Service__c</fullName>
+    <externalId>false</externalId>
+    <label>Mode of Service</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MODE_OF_SERVICE_IN_PERSON</fullName>
+                <default>false</default>
+                <label>MODE_OF_SERVICE_IN_PERSON</label>
+            </value>
+            <value>
+                <fullName>MODE_OF_SERVICE_VIDEO_CALL</fullName>
+                <default>false</default>
+                <label>MODE_OF_SERVICE_VIDEO_CALL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

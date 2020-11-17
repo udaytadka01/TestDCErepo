@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    <actionOverrides>
+        
+        <actionName>Accept</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Accept</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Accept</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>CancelEdit</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>CancelEdit</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>CancelEdit</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Clone</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Clone</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Clone</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Delete</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Delete</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Delete</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Edit</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Edit</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Edit</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>List</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>List</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>List</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>New</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>New</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>New</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>SaveEdit</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>SaveEdit</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>SaveEdit</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Tab</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Tab</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>Tab</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>View</actionName>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>View</actionName>
+        
+        <formFactor>Large</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <actionOverrides>
+        
+        <actionName>View</actionName>
+        
+        <formFactor>Small</formFactor>
+        
+        <type>Default</type>
+        
+    </actionOverrides>
+    
+    <allowInChatterGroups>false</allowInChatterGroups>
+    
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    
+    <deploymentStatus>Deployed</deploymentStatus>
+    
+    <description>Individual records from a roster, assigning a practitioner to a billing entity</description>
+    
+    <enableActivities>false</enableActivities>
+    
+    <enableBulkApi>true</enableBulkApi>
+    
+    <enableFeeds>false</enableFeeds>
+    
+    <enableHistory>false</enableHistory>
+    
+    <enableLicensing>false</enableLicensing>
+    
+    <enableReports>true</enableReports>
+    
+    <enableSearch>false</enableSearch>
+    
+    <enableSharing>true</enableSharing>
+    
+    <enableStreamingApi>true</enableStreamingApi>
+    
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    
+    <label>Roster Assignment</label>
+    
+    <nameField>
+        
+        <displayFormat>RA-{00000}</displayFormat>
+        
+        <label>Roster Assignment Name</label>
+        
+        <type>AutoNumber</type>
+        
+    </nameField>
+    
+    <pluralLabel>Roster Assignments</pluralLabel>
+    
+    <searchLayouts/>
+    
+    <sharingModel>ControlledByParent</sharingModel>
+    
+    <visibility>Public</visibility>
+    
+<fields>
+        
+    <fullName>Account__c</fullName>
+        
+    <description>Lookup to top-level account for a participant</description>
+        
+    <externalId>false</externalId>
+        
+    <label>Account</label>
+        
+    <lookupFilter>
+            
+        <active>true</active>
+            
+        <errorMessage>Value does not exist or does not match filter criteria, Account must be of type &quot;Organization&quot;</errorMessage>
+            
+        <filterItems>
+                
+            <field>Account.Type</field>
+                
+            <operation>equals</operation>
+                
+            <value>Organization</value>
+                
+        </filterItems>
+            
+        <isOptional>false</isOptional>
+            
+    </lookupFilter>
+        
+    <referenceTo>Account</referenceTo>
+        
+    <relationshipLabel>Roster Assignments</relationshipLabel>
+        
+    <relationshipName>Roster_Assignments</relationshipName>
+        
+    <relationshipOrder>0</relationshipOrder>
+        
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>MasterDetail</type>
+        
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        
+</fields>
+    <fields>
+        
+    <fullName>Document_Id__c</fullName>
+        
+    <externalId>false</externalId>
+        
+    <label>Document Id</label>
+        
+    <length>255</length>
+        
+    <required>false</required>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>Text</type>
+        
+    <unique>false</unique>
+        
+</fields>
+    <fields>
+        
+    <fullName>End_Date__c</fullName>
+        
+    <description>Termination date of this practitioner&apos;s assignment</description>
+        
+    <externalId>false</externalId>
+        
+    <label>End Date</label>
+        
+    <required>false</required>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>Date</type>
+        
+</fields>
+    <fields>
+        
+    <fullName>Practitioner__c</fullName>
+        
+    <deleteConstraint>SetNull</deleteConstraint>
+        
+    <description>Lookup to practitioner record who is being assigned</description>
+        
+    <externalId>false</externalId>
+        
+    <label>Practitioner</label>
+        
+    <lookupFilter>
+            
+        <active>true</active>
+            
+        <errorMessage>Value does not exist or does not match filter criteria, must look up to a practitioner</errorMessage>
+            
+        <filterItems>
+                
+            <field>Contact.NPI__c</field>
+                
+            <operation>notEqual</operation>
+                
+            <value/>
+                
+        </filterItems>
+            
+        <isOptional>false</isOptional>
+            
+    </lookupFilter>
+        
+    <referenceTo>Contact</referenceTo>
+        
+    <relationshipLabel>Roster Assignments</relationshipLabel>
+        
+    <relationshipName>Roster_Assignments</relationshipName>
+        
+    <required>false</required>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>Lookup</type>
+        
+</fields>
+    <fields>
+        
+    <fullName>Source_System_Id__c</fullName>
+        
+    <description>Id of the external document where the roster assignment originates from.</description>
+        
+    <externalId>false</externalId>
+        
+    <label>Source System Id</label>
+        
+    <length>255</length>
+        
+    <required>false</required>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>Text</type>
+        
+    <unique>false</unique>
+        
+</fields>
+    <fields>
+        
+    <fullName>Start_Date__c</fullName>
+        
+    <externalId>false</externalId>
+        
+    <label>Start Date</label>
+        
+    <required>false</required>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>Date</type>
+        
+</fields>
+    <fields>
+        
+    <fullName>TaxId__c</fullName>
+        
+    <externalId>false</externalId>
+        
+    <label>TaxId</label>
+        
+    <length>255</length>
+        
+    <required>true</required>
+        
+    <trackTrending>false</trackTrending>
+        
+    <type>Text</type>
+        
+    <unique>false</unique>
+        
+</fields>
+    <listViews>
+        
+    <fullName>All</fullName>
+        
+    <columns>NAME</columns>
+        
+    <columns>Account__c</columns>
+        
+    <columns>Practitioner__c</columns>
+        
+    <columns>TaxId__c</columns>
+        
+    <columns>Start_Date__c</columns>
+        
+    <columns>End_Date__c</columns>
+        
+    <filterScope>Everything</filterScope>
+        
+    <label>All</label>
+        
+</listViews>
+</CustomObject>

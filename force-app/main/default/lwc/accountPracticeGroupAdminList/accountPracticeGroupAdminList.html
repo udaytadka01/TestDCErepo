@@ -1,0 +1,14 @@
+<template>
+    <template if:true={records}>
+        <template for:each={records} for:item="record">
+            <c-practice-group-user-list record-id={record.Id} key={record.Id} onsave={handleSave}></c-practice-group-user-list>
+        </template>
+        <lightning-button label="Create New User" variant="brand" onclick={handleCreateNewUser}></lightning-button>
+        <template if:true={showNewUserModal}>
+            <c-ca-user-management-modal action="activate" record-id={recordId} onsave={handleSave} onclose={handleCloseModal}></c-ca-user-management-modal>
+        </template>
+        <template if:true={loading}>
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </template>
+    </template>
+</template>

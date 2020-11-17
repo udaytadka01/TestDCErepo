@@ -1,0 +1,23 @@
+<template>
+    <template if:true={dataInitialized}>
+        <div onkeyup={handleSearch} class="slds-var-m-bottom_small">
+            <lightning-input
+                name="enter-search"
+                label="Search for a user by their name, email, npi"
+                type="search"
+            ></lightning-input>
+        </div>
+        <div class="slds-var-m-bottom_small">
+            <lightning-datatable
+                key-field="id"
+                data={unassignedContacts}
+                columns={columns}
+                onrowselection={handleSelectedRows}>
+            </lightning-datatable>
+        </div>
+        <lightning-button variant="brand" label="Assign Selected Users" onclick={handleSave}></lightning-button>
+    </template>
+    <template if:true={loading}>
+        <lightning-spinner alternative-text="Loading"></lightning-spinner>
+    </template>
+</template>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecommendationStrategy xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contextRecordType>Account</contextRecordType>
+    <label>Practice Group Onboarding</label>
+    <recommendationLoad>
+        <label>Assign a user to be the practice manager</label>
+        <name>Assign_a_user_to_be_the_practice_manager</name>
+        <condition>
+            <field>Type__c</field>
+            <operator>EQUALS</operator>
+            <value>
+                <type>TEXT</type>
+                <value>Practice Group Onboarding</value>
+            </value>
+        </condition>
+        <conditionLogic>and</conditionLogic>
+        <object>Recommendation</object>
+    </recommendationLoad>
+    <union>
+        <childNode>Assign_a_user_to_be_the_practice_manager</childNode>
+        <label>Output</label>
+        <name>Output_2313b417e25b480d9d1c7fc3f84ab0f0</name>
+    </union>
+</RecommendationStrategy>
