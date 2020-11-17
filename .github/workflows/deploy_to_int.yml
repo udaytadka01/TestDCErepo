@@ -1,4 +1,4 @@
-name: Deploy to QA Sandbox
+name: Deploy to Integration Sandbox
 
 on:
   push:
@@ -27,8 +27,8 @@ jobs:
           path: main
       - name: Set environment variable
         run: |
-          cat ./env/.github/workflows/env | grep QA_CONSUMER_KEY= | grep -o '".*"' | sed 's/"//g' > ./main/QA_CONSUMER_KEY
-          cat ./env/.github/workflows/env | grep QA_USERNAME= | grep -o '".*"' | sed 's/"//g' > ./main/QA_USERNAME
+          cat ./env/.github/workflows/env | grep INT_CONSUMER_KEY= | grep -o '".*"' | sed 's/"//g' > ./main/INT_CONSUMER_KEY
+          cat ./env/.github/workflows/env | grep INT_USERNAME= | grep -o '".*"' | sed 's/"//g' > ./main/INT_USERNAME
     
       - name: Convert metadata to mdapi format
         run: |
@@ -38,7 +38,7 @@ jobs:
       - name: Authenticate Sandbox
         run: |
           echo "${SALESFORCE_JWT_SECRET_KEY}" > server.key
-          sfdx force:auth:jwt:grant --jwtkeyfile ./server.key --setalias qaorg --instanceurl https://test.salesforce.com --clientid $(cat ./main/QA_CONSUMER_KEY) --username $(cat ./main/QA_USERNAME)
+          sfdx force:auth:jwt:grant --jwtkeyfile ./server.key --setalias qaorg --instanceurl https://test.salesforce.com --clientid $(cat ./main/INT_CONSUMER_KEY) --username $(cat ./main/INT_USERNAME)
         env:
           SALESFORCE_JWT_SECRET_KEY: ${{ secrets.SFDX_JWT_SECRET_NONPROD }}
           
