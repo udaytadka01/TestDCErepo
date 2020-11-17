@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: 'integration'
-        path: env
+          path: env
       - name: Checkout source code
         uses: actions/checkout@v2
         with:
@@ -45,5 +45,5 @@ jobs:
       - name: Deploy metadata to Target Sandbox
         run: |
           cd main
-          sfdx force:source:deploy --wait 180 -u qaorg --manifest metadatadeploy/package.xml --verbose
+          sfdx force:source:deploy --wait 180 --checkonly -u qaorg --manifest metadatadeploy/package.xml --verbose
   #       sfdx force:source:deploy --wait 180 --checkonly -u qaorg --manifest metadatadeploy/package.xml --verbose
