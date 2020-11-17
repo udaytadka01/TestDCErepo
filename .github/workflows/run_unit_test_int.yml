@@ -1,7 +1,7 @@
 name: Run unit tests on int Sandbox
 
 on:
-  pull_request:
+  push:
     branches: [ integration ]   
     paths:
       - '.github/workflows/**'
