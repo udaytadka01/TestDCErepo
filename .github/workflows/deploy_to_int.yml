@@ -5,7 +5,7 @@ on:
     branches: [ integration ]
 
 jobs:     
-  deploy-to-qa:      
+  deploy-to-int:      
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
