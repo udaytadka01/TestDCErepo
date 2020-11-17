@@ -12,7 +12,8 @@ jobs:
   run-unit-tests-on-qa:     
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name : checkout branch
+        uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
