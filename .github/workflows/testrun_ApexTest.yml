@@ -1,0 +1,17 @@
+name: Run unit tests on QA Test Apex pipeline
+
+on: 
+  pull_request:
+    branches:
+      - release-**
+    paths:
+      - '.github/workflows/**'
+      - 'force-app/**'
+
+jobs:
+
+  run-unit-tests-on-qa:     
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install Salesforce CLI
+      run: |
