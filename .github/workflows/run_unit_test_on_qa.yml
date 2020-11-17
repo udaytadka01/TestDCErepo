@@ -4,9 +4,6 @@ on:
   pull_request:
     branches:
       - integration
-    paths:
-      - '.github/workflows/**'
-      - 'force-app/**'
 
 jobs:
 
