@@ -3,6 +3,9 @@ name: Deploy to int Sandbox
 on:
   push:
     branches: [ integration ]
+    paths:
+      - '.github/workflows/**'
+      - 'force-app/**'
 
 jobs:     
   deploy-to-int:      
