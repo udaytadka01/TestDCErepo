@@ -2,7 +2,7 @@ name: Run_Apex_on_QA-Sandbox
 on:
   pull_request:
     branches: 
-      - integration
+      - release-**
     types: [opened, synchronize, reopened]
 jobs:
   run-unit-test-on-qa:
