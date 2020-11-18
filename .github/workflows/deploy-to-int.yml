@@ -1,11 +1,8 @@
 name: Deploy to Integration Sandbox
 on:
   push:
-    branches: 
-      - integration 
-    paths:
-      - '.github/workflows/**'
-      - 'force-app/**'
+    branches:
+      - integration
 jobs:
   deploy-on-int:     
     runs-on: ubuntu-latest
