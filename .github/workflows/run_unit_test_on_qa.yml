@@ -1,15 +1,16 @@
 name: Run_Apex_on_QA-Sandbox
 on:
   pull_request:
-    branches:
+    branches: 
       - integration
-    paths:
-      - '.github/workflows/**'
-      - 'force-app/**'
+    types: [opened, synchronize, reopened]
 jobs:
-  run-unit-tests-on-qa:     
+  run-unit-test-on-qa:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Salesforce CLI
+      - name: test for this Apex TEST QA
         run: |
-          echo "this is APex test on QA"
+          echo "this is test file for APEX
+       
+     
+     
