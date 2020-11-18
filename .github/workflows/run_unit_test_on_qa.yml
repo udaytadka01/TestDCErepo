@@ -1,4 +1,4 @@
-name: Run unit tests on QA Sandbox
+name: Run_Apex_on_QA-Sandbox
 on:
   pull_request:
     branches:
