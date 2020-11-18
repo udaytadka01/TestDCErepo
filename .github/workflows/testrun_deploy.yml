@@ -1,7 +1,6 @@
-name: Deploy to QA TEST pioeline
-
-on:
-  push:
+name: Run unit tests on QA Sandbox
+on: 
+  pull_request:
     branches:
       - release-**
     paths:
@@ -9,9 +8,7 @@ on:
       - 'force-app/**'
 
 jobs:
-  deploy-to-qa:      
+  run-unit-tests-on-qa:     
     runs-on: ubuntu-latest
     steps:
-      - name: Install Salesforce CLIh
-        run: |
-          echo "test pipeline"
+    - name: Install Salesforce CLI
