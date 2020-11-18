@@ -1,11 +1,10 @@
-name: Run Apex Test on QA Sandbox
+name: Test deploy to QA
 on:
-  pull_request:
-    branches: 
+  push:
+    branches:
       - release-**
-    types: [opened, synchronize, reopened]
 jobs:   
-  run-unit-tests-on-qa:      
+  deploy-to-qa:      
     runs-on: ubuntu-latest
     steps:
       - name: Install Salesforce CLI
@@ -38,12 +37,12 @@ jobs:
         env:
           SALESFORCE_JWT_SECRET_KEY: ${{ secrets.SFDX_JWT_SECRET_NONPROD }}
           
-      - name: Run Apex Tests on Target Sandbox
+      - name: Deploy on Target Sandbox
         run: |
           cd main
-          sfdx force:source:deploy --wait 180 --checkonly --testlevel RunLocalTests -u qaorg --manifest metadatadeploy/package.xml --verbose
+          sfdx force:source:deploy --wait 180 --checkonly -u qaorg --manifest metadatadeploy/package.xml --verbose
   #       sfdx force:source:deploy --wait 180 --checkonly -u qaorg --manifest metadatadeploy/package.xml --verbose
-  #       sfdx force:source:deploy --wait 180 --checkonly -u qaorg --manifest metadatadeploy/package.xml --verbose
+
        
      
      

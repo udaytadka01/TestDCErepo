@@ -1,11 +1,11 @@
-name: Run Apex Test on QA Sandbox
+name: Run Apex on Prod Sandbox
 on:
   pull_request:
     branches: 
-      - release-**
+      - master
     types: [opened, synchronize, reopened]
 jobs:   
-  run-unit-tests-on-qa:      
+  run-unit-tests-on-prod:      
     runs-on: ubuntu-latest
     steps:
       - name: Install Salesforce CLI
@@ -25,8 +25,8 @@ jobs:
           path: main
       - name: Set environment variable
         run: |
-          cat ./env/.github/workflows/env | grep QA_CONSUMER_KEY= | grep -o '".*"' | sed 's/"//g' > ./main/QA_CONSUMER_KEY
-          cat ./env/.github/workflows/env | grep QA_USERNAME= | grep -o '".*"' | sed 's/"//g' > ./main/QA_USERNAME
+          cat ./env/.github/workflows/env | grep PROD_CONSUMER_KEY= | grep -o '".*"' | sed 's/"//g' > ./main/PROD_CONSUMER_KEY
+          cat ./env/.github/workflows/env | grep PROD_USERNAME= | grep -o '".*"' | sed 's/"//g' > ./main/PROD_USERNAME
       - name: Convert metadata to mdapi format
         run: |
           cd main
@@ -34,16 +34,16 @@ jobs:
       - name: Authenticate Sandbox
         run: |
           echo "${SALESFORCE_JWT_SECRET_KEY}" > server.key
-          sfdx force:auth:jwt:grant --jwtkeyfile ./server.key --setalias qaorg --instanceurl https://test.salesforce.com --clientid $(cat ./main/QA_CONSUMER_KEY) --username $(cat ./main/QA_USERNAME)
+          sfdx force:auth:jwt:grant --jwtkeyfile ./server.key --setalias prodOrg --instanceurl https://test.salesforce.com --clientid $(cat ./main/PROD_CONSUMER_KEY) --username $(cat ./main/PROD_USERNAME)
         env:
           SALESFORCE_JWT_SECRET_KEY: ${{ secrets.SFDX_JWT_SECRET_NONPROD }}
           
       - name: Run Apex Tests on Target Sandbox
         run: |
           cd main
-          sfdx force:source:deploy --wait 180 --checkonly --testlevel RunLocalTests -u qaorg --manifest metadatadeploy/package.xml --verbose
-  #       sfdx force:source:deploy --wait 180 --checkonly -u qaorg --manifest metadatadeploy/package.xml --verbose
-  #       sfdx force:source:deploy --wait 180 --checkonly -u qaorg --manifest metadatadeploy/package.xml --verbose
+          sfdx force:source:deploy --wait 180 --checkonly --testlevel RunLocalTests -u prodOrg --manifest metadatadeploy/package.xml --verbose
+  #       sfdx force:source:deploy --wait 180 --checkonly -u prodorg --manifest metadatadeploy/package.xml --verbose
+  #       sfdx force:source:deploy --wait 180 --checkonly -u prodorg --manifest metadatadeploy/package.xml --verbose
        
      
      
