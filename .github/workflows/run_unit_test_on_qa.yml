@@ -10,6 +10,6 @@ jobs:
   run-unit-tests-on-qa:     
     runs-on: ubuntu-latest
     steps:
-    - name: Install Salesforce CLI
-      run: |
-        echo "this is APex test on QA"
+      - name: Install Salesforce CLI
+        run: |
+          echo "this is APex test on QA"
