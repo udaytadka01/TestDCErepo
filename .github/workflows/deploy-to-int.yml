@@ -1,7 +1,8 @@
 name: Deploy to Integration Sandbox
 on:
   push:
-    branches: [ integration ]
+    branches: 
+      - integration 
     paths:
       - '.github/workflows/**'
       - 'force-app/**'
