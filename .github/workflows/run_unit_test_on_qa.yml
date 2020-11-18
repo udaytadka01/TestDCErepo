@@ -2,7 +2,7 @@ name: Run_Apex_on_QA-Sandbox
 on:
   pull_request:
     branches:
-      - release-**
+      - integration
     paths:
       - '.github/workflows/**'
       - 'force-app/**'
