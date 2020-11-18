@@ -45,7 +45,6 @@ jobs:
         env:
           SALESFORCE_JWT_SECRET_KEY: ${{ secrets.SFDX_JWT_SECRET_NONPROD }}
 
-    
       - name: Run Apex Tests on Target Sandbox
         run: |
           cd main
