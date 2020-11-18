@@ -1,7 +1,9 @@
 name: Test deploy to QA
 on:
   push:
-    branches: [ integration ]
+    branches:
+      - release-**
+    types: [opened, synchronize, reopened]
 jobs:
   deploy-to-qa:
     runs-on: ubuntu-latest
