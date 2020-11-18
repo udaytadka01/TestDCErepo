@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - release-**
-    types: [opened, synchronize, reopened]
 jobs:
   deploy-to-qa:
     runs-on: ubuntu-latest
