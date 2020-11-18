@@ -1,8 +1,9 @@
 name: Run unit tests on QA Sandbox
-on: 
+on:
   pull_request:
     branches:
-      - integration
+      - release-**
+    types: [opened, synchronize, reopened]
     paths:
       - '.github/workflows/**'
       - 'force-app/**'
