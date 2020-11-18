@@ -3,7 +3,6 @@ on:
   pull_request:
     branches:
       - release-**
-    types: [opened, synchronize, reopened]
     paths:
       - '.github/workflows/**'
       - 'force-app/**'
