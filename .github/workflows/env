@@ -2,3 +2,5 @@ QA_CONSUMER_KEY="3MVG9Fy_1ZngbXqPokg4mRQXo_EG7TwH_vZkJcKR_iagg1EK7FEeDN8kt7zEBG.
 QA_USERNAME="uday.tadka@vendors.cloverhealth.com.dce.cicdtest"
 INT_CONSUMER_KEY="3MVG9Fy_1ZngbXqPokg4mRQXo_EG7TwH_vZkJcKR_iagg1EK7FEeDN8kt7zEBG.mRfbC.b9euUhkDTSnr50NX"
 INT_USERNAME="uday.tadka@vendors.cloverhealth.com.dce.cicdtest"
+PROD_CONSUMER_KEY="3MVG9Fy_1ZngbXqPokg4mRQXo_EG7TwH_vZkJcKR_iagg1EK7FEeDN8kt7zEBG.mRfbC.b9euUhkDTSnr50NX"
+PROD_USERNAME="uday.tadka@vendors.cloverhealth.com.dce.cicdtest"
