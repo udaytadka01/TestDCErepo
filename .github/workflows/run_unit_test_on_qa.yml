@@ -1,1 +1,15 @@
-#test pipeline for Apex test on QA
+name: Run unit tests on QA Sandbox
+on: 
+  pull_request:
+    branches:
+      - integration
+    paths:
+      - '.github/workflows/**'
+      - 'force-app/**'
+jobs:
+  run-unit-tests-on-qa:     
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install Salesforce CLI
+      run: |
+        echo "this is APex test on QA"
