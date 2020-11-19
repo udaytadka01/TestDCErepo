@@ -36,14 +36,12 @@ jobs:
           echo "${SALESFORCE_JWT_SECRET_KEY}" > server.key
           sfdx force:auth:jwt:grant --jwtkeyfile ./server.key --setalias prodOrg --instanceurl https://test.salesforce.com --clientid $(cat ./main/PROD_CONSUMER_KEY) --username $(cat ./main/PROD_USERNAME)
         env:
-        # update the key of prod name
-          SALESFORCE_JWT_SECRET_KEY: ${{ secrets.SFDX_JWT_SECRET_NONPROD }}
+          SALESFORCE_JWT_SECRET_KEY: ${{ secrets.SFDX_JWT_SECRET }}
           
       - name: Run Apex Tests on Target Sandbox
         run: |
           cd main
           sfdx force:source:deploy --wait 180 --checkonly --testlevel RunLocalTests -u prodOrg --manifest metadatadeploy/package.xml --verbose
-  #       sfdx force:source:deploy --wait 180 --checkonly -u prodorg --manifest metadatadeploy/package.xml --verbose
   #       sfdx force:source:deploy --wait 180 --checkonly -u prodorg --manifest metadatadeploy/package.xml --verbose
        
      
