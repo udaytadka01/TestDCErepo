@@ -1,4 +1,4 @@
-name: Run unit tests on Integration Sandbox
+name: Run unit tests on all Integration Sandbox
 on: 
   pull_request:
     branches: [ integration, release-**, master ]

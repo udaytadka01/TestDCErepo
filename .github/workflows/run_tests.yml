@@ -1,0 +1,19 @@
+name: Run Apex Tests
+
+on: 
+  pull_request:
+    branches:
+      - master
+      - release-**
+      - integration
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Populate auth file with secret
+        run: |
+          echo "this is test run"

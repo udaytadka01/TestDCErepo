@@ -34,7 +34,7 @@ jobs:
       - name: Authenticate Sandbox
         run: |
           echo "${SALESFORCE_JWT_SECRET_KEY}" > server.key
-          sfdx force:auth:jwt:grant --jwtkeyfile ./server.key --setalias prodOrg --instanceurl https://test.salesforce.com --clientid $(cat ./main/PROD_CONSUMER_KEY) --username $(cat ./main/PROD_USERNAME)
+          sfdx force:auth:jwt:grant --jwtkeyfile ./server.key --setalias prodOrg --instanceurl https://login.salesforce.com --clientid $(cat ./main/PROD_CONSUMER_KEY) --username $(cat ./main/PROD_USERNAME)
         env:
           SALESFORCE_JWT_SECRET_KEY: ${{ secrets.SFDX_JWT_SECRET }}
           
