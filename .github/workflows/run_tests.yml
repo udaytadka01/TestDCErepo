@@ -1,4 +1,4 @@
-name: Run Apex Tests
+name: Run ApexTest Scratch Orgs
 
 on: 
   pull_request:
