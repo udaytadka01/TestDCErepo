@@ -1,8 +1,10 @@
 name: Deploy to UAT Sandbox
 on: 
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["Run unit tests on UAT Sandbox"]
     branches:
       - release-**
+  workflow_dispatch:
 jobs:
   run-unit-tests-on-uat:     
     runs-on: ubuntu-latest
