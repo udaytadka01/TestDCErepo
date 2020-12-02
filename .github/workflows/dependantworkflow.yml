@@ -3,7 +3,7 @@
 name: dependant workflow
 on:
   workflow_run:
-    workflows: ["manual trigger"]
+    workflows: ["Run unit tests on UAT Sandbox"]
     branches:
       - release-**
     types:
