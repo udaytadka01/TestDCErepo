@@ -4,9 +4,11 @@ on:
     workflows: ["Run unit tests on UAT Sandbox"]
     branches:
       - release-**
+    types:
+      - completed
   workflow_dispatch:
 jobs:
-  run-unit-tests-on-uat:     
+  deploy-on-uat:     
     runs-on: ubuntu-latest
     steps:
       - name: Install Salesforce CLI
