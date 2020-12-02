@@ -7,6 +7,8 @@ on:
 #  pull_request:
 #    branches: [ integration ]
   workflow_dispatch:
+    branches:
+      - release-**
 jobs:
   build:
     runs-on: ubuntu-latest
