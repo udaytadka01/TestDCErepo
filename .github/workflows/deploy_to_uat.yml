@@ -8,7 +8,8 @@ on:
       - completed
   workflow_dispatch:
 jobs:
-  deploy-on-uat:     
+  deploy-on-uat:  
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}   
     runs-on: ubuntu-latest
     steps:
       - name: Install Salesforce CLI
