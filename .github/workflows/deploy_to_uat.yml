@@ -22,10 +22,14 @@ jobs:
         with:
           ref: 'integration'
           path: env
+      - name: Branch name before
+        run: echo running on branch ${GITHUB_REF##*/}
       - name: Checkout source code
         uses: actions/checkout@v2
         with:
           path: main
+      - name: Branch name after
+        run: echo running on branch ${GITHUB_REF##*/}
       - name: Set environment variable
         run: |
           cat ./env/.github/workflows/env | grep UAT_CONSUMER_KEY= | grep -o '".*"' | sed 's/"//g' > ./main/UAT_CONSUMER_KEY
